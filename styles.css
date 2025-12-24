@@ -1,0 +1,149 @@
+/* RESET STYLESHEET */
+* {
+    padding:0;
+    margin:0;
+    /* outline:2px solid red; */
+}
+
+/* Font Styles */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+.poppins-extralight {
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.poppins-regular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.poppins-semibold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+ 
+/* End Font Styles */
+
+/* Custom Properties */
+:root {
+    --ff-sans: 'Poppins', sans-serif;
+    --fs-400:0.9275rem;
+    --fs-500:1.25rem;
+    --fs-600:1.625rem;
+    --fs-900:2.5rem;
+    --fw-light:200;
+    --fw-noraml:400;
+    --fw-bold:600;
+    --clr-grey-500:hsl(234, 12%, 34%);
+    --clr-grey-400:hsl(212, 6%, 44%);
+    --clr-white:hsl(0, 0%, 100%);
+    --clr-red:hsl(0, 78%, 62%);
+    --clr-cyan:hsl(180, 62%, 55%);
+    --clr-orange:hsl(34, 97%, 64%);
+    --clr-blue:hsl(212, 86%, 64%);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing:border-box;
+}
+
+html {
+    font-family: var(--ff-sans);
+    font-weight: var(--fw-normal);
+    line-height:1.7;
+    color: var(--clr-grey-400);
+}
+
+body {
+    margin:0;
+    padding-block-end: 5rem;
+}
+
+h1,
+h2,
+h3 {
+    line-height:1.2;
+    color: var(--clr-grey-500);
+}
+
+.wrapper {
+    margin-inline:auto;
+    max-width:1200px;
+}
+
+.wrapper--narrow {
+    max-width:550px;
+}
+
+header {
+    text-align: center;
+    margin-block: 6rem;
+}
+
+h1 {
+    font-size: var(--fs-900);
+    font-weight: var(--fw-light);
+}
+ h1 span {
+    font-weight: var(--fw-bold);
+ }
+
+header > p {
+    font-size: var(--fs-500);
+}
+.layout-grid {
+    --gap: 2rem;
+    display:grid;
+    gap: var(--gap);
+}
+
+@media (min-width: 800px) {
+    .layout-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+.col {
+    display:grid;
+    gap: var(--gap);
+    align-content:center;
+}
+
+.card {
+    padding: 2rem;
+    border-radius:0.5rem;
+    box-shadow: 0 1rem 1.5rem -0.5rem rgb(0 50 100 / 0.1);
+    border-top: 5px solid;
+}
+
+.card__title {
+    font-size: var(--fs-600);
+    margin:0;
+}
+/* margin auto won't work on inline items, make the img display:block to use margin */
+.card__img {
+    display:block;
+    margin-left: auto;
+    margin-top:2rem;
+}
+.border-cyan {
+    border-color: var(--clr-cyan);
+}
+
+.border-red {
+    border-color: var(--clr-red);
+}
+
+.border-orange {
+    border-color: var(--clr-orange);
+}
+
+.border-blue {
+    border-color: var(--clr-blue);
+}
